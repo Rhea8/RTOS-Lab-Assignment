@@ -20,6 +20,7 @@ printf("Enter 10 no.s\n");
 for(i=0;i<10;i++)
 {
 scanf("%d", &a[i]);
+}
 shmid=shmget(key,100,IPC_CREAT|0666);
 if (shmid < 0) 
      {
@@ -55,7 +56,7 @@ printf("the parent process has detached the shared memory\n ");
           printf("the parent process has removed the shared memory...\n");
 }
 }
-}
+
 int findsum(int a[10])
 {
 int j, sum=0;
